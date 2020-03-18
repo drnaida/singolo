@@ -1,5 +1,6 @@
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 body {
   font-size: 1.6rem;
@@ -16,6 +17,8 @@ body {
   background-color: #2d303a;
   border-bottom: 6px solid #323746;
   color: #ffffff;
+  position: fixed;
+  width: 100%;
 }
 .header__heading {
   text-transform: uppercase;
@@ -39,6 +42,9 @@ body {
   margin-left: 2.8rem;
   color: #666d89;
 }
+.header-navigation__element--active {
+  color: #f06c64;
+}
 .header-navigation__element:first-child {
   list-style: none;
 }
@@ -58,7 +64,6 @@ body {
   text-decoration: underline;
 }
 #home {
-  color: #f06c64;
   margin-right: 0.1rem;
 }
 #services {
@@ -92,6 +97,13 @@ body {
 .section-slider__vertical-phone {
   margin-top: -0.5rem;
   margin-right: 1.7rem;
+  position: relative;
+}
+#section-slider__vertical-phone--housing {
+  position: absolute;
+}
+#section-slider__vertical-phone--screen {
+  position: absolute;
 }
 .section-slider__horizontal-phone {
   margin-top: -0.6rem;
