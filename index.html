@@ -211,12 +211,12 @@
         </p>
         <div class="section-contact__content">
           <div class="section-contact__form">
-            <form class="section-contact__form-content" action="index.html" method="post">
-              <input type="text" value="" required class="section-contact__form--input" placeholder="Name (Required)">
-              <input type="email" value="" required class="section-contact__form--input" placeholder="Email (Required)">
+            <form class="section-contact__form-content" action="index.html" method="post" id="section-contact__form">
+              <input type="text" value="" required class="section-contact__form--input" id="section-contact__form--input-name" placeholder="Name (Required)">
+              <input type="email" value="" required class="section-contact__form--input" id="section-contact__form--input-email" placeholder="Email (Required)">
               <input type="text" value="" class="section-contact__form--input" id="section-contact__form--input-subject" placeholder="Subject">
               <input type="text" value="" class="section-contact__form--input" id="section-contact__form--input-description" placeholder="Describe your project in detail...">
-              <button type="submit" name="button" class="section-contact__form-content--button" id="section-contact__button">Submit</button>
+              <button name="button" class="section-contact__form-content--button" id="section-contact__button">Submit</button>
             </form>
           </div>
           <div class="section-contact__aside">
@@ -254,8 +254,21 @@
     <script type="text/javascript" src="script.js">
 
     </script>
-    <div class="section-contact-popup">
-      
+    <div class="section-contact-popup section-contact-popup--hidden" id="popup">
+      <div class="section-contact-popup__content">
+        <span class="section-contact-popup__span">
+          The letter was sent
+        </span>
+        <span class="section-contact-popup__span" id="section-contact-popup__span--subject">
+          sfsdfsdf
+        </span>
+        <span class="section-contact-popup__span" id="section-contact-popup__span--description">
+          sfsdfsd
+        </span>
+        <button class="section-contact-popup__button" id="section-contact-popup__button">
+          Ok
+        </button>
+      </div>
     </div>
   </body>
 </html>

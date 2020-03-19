@@ -259,6 +259,7 @@ span {
   height: 18.7rem;
   width: 22rem;
   margin-bottom: 2rem;
+  cursor: pointer;
 }
 .section-portfolio__content--element--1 {
   background-image: url(assets/portfolio-image-1.png);
@@ -476,6 +477,45 @@ span {
 #section-contact__aside--main-paragraph {
   margin-bottom: 2.5rem;
   margin-top: 0.9rem;
+}
+.section-contact-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 30rem;
+  width: 30rem;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 3rem rgba(0,0,0,0.5);
+  border-radius: 5px;
+}
+.section-contact-popup__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section-contact-popup__span {
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+}
+.section-contact-popup__button {
+  background-color: #f0d8d9;
+  color: #d6564f;
+  border: none;
+  padding: 1.5rem 2.5rem;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all .2s;
+}
+.section-contact-popup__button:hover {
+  transform: translateY(-3px);
+}
+.section-contact-popup--hidden {
+  display: none;
 }
 .footer {
   display: flex;
