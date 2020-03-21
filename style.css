@@ -18,8 +18,10 @@ body {
   border-bottom: 6px solid #323746;
   color: #ffffff;
   position: fixed;
+  top: 0;
   width: 100%;
   max-width: 1020px;
+  z-index: 10000;
 }
 .header__heading {
   text-transform: uppercase;
@@ -74,6 +76,7 @@ body {
   margin-right: 0.1rem;
 }
 .section-slider {
+  padding-top: 19.5rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -87,6 +90,7 @@ body {
 .section-slider__arrow--left {
   margin-top: -0.5rem;
   margin-left: 1.2rem;
+  z-index: 9999;
 }
 .section-slider__arrow--left:hover {
   cursor: pointer;
@@ -94,6 +98,7 @@ body {
 .section-slider__arrow--right {
   margin-top: -0.5rem;
   margin-right: 1.1rem;
+  z-index: 9999;
 }
 .section-slider__vertical-phone {
   margin-top: -0.5rem;
@@ -122,6 +127,78 @@ body {
 .section-slider__arrow--right:hover {
   cursor: pointer;
 }
+.section-slider__slide--hidden {
+  display: none;
+}
+.slider-left {
+  visibility: visible !important;
+  -webkit-animation-name: slideleft;
+  animation-name: slideleft;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+@keyframes slideleft {
+  0% {
+    transform: translateX(125%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+.slider-left-gone {
+  visibility: visible !important;
+  -webkit-animation-name: slideleftgone;
+  animation-name: slideleftgone;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+@keyframes slideleftgone {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-125%);
+  }
+}
+.slider-right {
+  visibility: visible !important;
+  -webkit-animation-name: slideright;
+  animation-name: slideright;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+@keyframes slideright {
+  0% {
+    transform: translateX(-125%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+.slider-right-gone {
+  visibility: visible !important;
+  -webkit-animation-name: sliderightgone;
+  animation-name: sliderightgone;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+@keyframes sliderightgone {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(125%);
+  }
+}
+
 .section-our-services {
   height: 49.913rem;
   background-color: #f2f2f2;

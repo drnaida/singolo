@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="fonts.css">
   </head>
   <body>
-    <header class="header section" id="section-home">
+    <header class="header section">
       <h1 class="header__heading">Singolo<span>*</span></h1>
       <nav class="header-navigation">
         <ul class="header-navigation__list">
@@ -20,14 +20,21 @@
       </nav>
     </header>
     <main>
-      <section class="section-slider">
-        <img class="section-slider__arrow--left" src="assets/arrow-left.png" alt="Icon of left arrow">
-        <img id="section-slider__vertical-phone--housing" src="assets/verticalPhone.png" alt="Vertical Phone Housing">
-        <img id="section-slider__vertical-phone--screen" class="" src="assets/verticalPhoneScreen.png" alt="Vertical Phone Screen">
-        <img id="section-slider__horizontal-phone--housing" src="assets/horizontalPhone.png" alt="Horizontal Phone Housing">
-        <img id="section-slider__horizontal-phone--screen" class="" src="assets/horizontalPhoneScreen.png" alt="Horizontal Phone Screen">
-        <img class="section-slider__arrow--right" src="assets/arrow-right.png" alt="Icon of right arrow">
+      <section class="section-slider" id="section-home">
+        <div id="section-slider__slide-1">
+          <img id="section-slider__vertical-phone--housing" src="assets/verticalPhone.png" alt="Vertical Phone Housing">
+          <img id="section-slider__vertical-phone--screen" class="" src="assets/verticalPhoneScreen.png" alt="Vertical Phone Screen">
+          <img id="section-slider__horizontal-phone--housing" src="assets/horizontalPhone.png" alt="Horizontal Phone Housing">
+          <img id="section-slider__horizontal-phone--screen" class="" src="assets/horizontalPhoneScreen.png" alt="Horizontal Phone Screen">
+        </div>
+        <div id="section-slider__slide-2" class="section-slider__slide--hidden">
+          <img src="assets/slide-2.png" alt="Second Slide">
+        </div>
+        <img class="section-slider__arrow--left" id="section-slider__arrow--left" src="assets/arrow-left.png" alt="Icon of left arrow">
+        <img class="section-slider__arrow--right" id="section-slider__arrow--right" src="assets/arrow-right.png" alt="Icon of right arrow">
       </section>
+
+
       <section class="section-our-services section" id="section-services">
         <h2 class="section-our-services__heading">Our Services</h2>
         <p class="section-our-services__paragraph">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>

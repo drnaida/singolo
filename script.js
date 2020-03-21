@@ -17,6 +17,41 @@ function onScroll(event) {
     }
   });
 }
+/*Switching slides*/
+//1. Make all of important things variables
+let arrowLeft = document.getElementById('section-slider__arrow--left');
+let arrowRight = document.getElementById('section-slider__arrow--right');
+let firstSlide = document.getElementById('section-slider__slide-1');
+let secondSlide = document.getElementById('section-slider__slide-2');
+let slideCondition = 0;
+//2. Call function on clicling on the right and left buttons
+arrowLeft.addEventListener('click', switchLeft);
+arrowRight.addEventListener('click', switchRight);
+//
+function switchLeft() {
+  if (slideCondition) {
+    slideCondition = 0;
+    secondSlide.classList.add('section-slider__slide--hidden');
+    secondSlide.classList.add('slider-left-gone');
+    firstSlide.classList.remove('section-slider__slide--hidden');
+    firstSlide.classList.add('slider-left');
+  } else {
+    slideCondition = 1;
+    secondSlide.classList.remove('section-slider__slide--hidden');
+    firstSlide.classList.add('section-slider__slide--hidden');
+  }
+}
+function switchRight() {
+  if (slideCondition) {
+    slideCondition = 0;
+    secondSlide.classList.add('section-slider__slide--hidden');
+    firstSlide.classList.remove('section-slider__slide--hidden');
+  } else {
+    slideCondition = 1;
+    secondSlide.classList.remove('section-slider__slide--hidden');
+    firstSlide.classList.add('section-slider__slide--hidden');
+  }
+}
 /*Slider activation of phones*/
 document.getElementById('section-slider__vertical-phone--housing').addEventListener('click', phoneSwitching1);
 let phoneCondition1 = 1;
@@ -65,13 +100,49 @@ function navigationActivation() {
     targetElement.classList.add('section-portfolio__navigation--element-active');
   }
 }
-//2. Make image to change position
-
-
+//2. Make image change position
+//Save important things in variables
+let portfolioNavigationButtons = portfolioNavigation.querySelectorAll('span');
+let portfolioContent = document.querySelector('.section-portfolio__content');
+//Call the function on click
+portfolioNavigationButtons.forEach(item => item.addEventListener('click', shuffle));
+//Shuffle function
+function shuffle(event) {
+  //Save other important information in variables
+  let portfolioImages = portfolioContent.querySelectorAll('img');
+  let targetElement = event.target;
+  //Make sure that user can't click on the same button twice
+  if (!targetElement.classList.contains('section-portfolio__navigation--element-active')) {
+    //Place all of the src in array
+    let srcArray = [];
+    portfolioImages.forEach(item => {
+      srcArray.push(item.src);
+    });
+    //Make the massive of random numbers without duplication
+    function random(size) {
+      //Array with length which is number of src
+      let randomNumbersArray = new Array(size).fill(0).map((item, i) => i);
+      for (let i = randomNumbersArray.length - 1; i > 0; i--) {
+          let j = Math.floor(Math.random() * i);
+          //No duplication
+          let tmp = randomNumbersArray[i];
+          randomNumbersArray[i] = randomNumbersArray[j];
+          randomNumbersArray[j] = tmp;
+      }
+      return randomNumbersArray;
+    }
+    //Make random array
+    let randomArray = random(12);
+    //Replace src by indexes in srcArray with random order
+    portfolioImages.forEach((item, index) => {
+        item.src = srcArray[randomArray[index]];
+    });
+  }
+}
 
 /*Portfolio: interaction with images*/
 //1. Call function on clicking on the image
-let portfolioContent = document.querySelector('.section-portfolio__content');
+//Portfolio content was declared in "Make image change position"
 portfolioContent.addEventListener('click', borderAppearing);
 function borderAppearing () {
   let targetElement = event.target;
