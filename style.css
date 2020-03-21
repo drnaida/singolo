@@ -77,56 +77,79 @@ body {
   margin-right: 0.1rem;
 }
 .section-slider {
-  padding-top: 19.5rem;
-  display: flex;
+  padding-top: 9.5rem;
+  /* display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-around; */
   height: 60rem;
   background-color: #f06c64;
   margin-bottom: 0;
   border-bottom: 6px solid #ea676b;
-  box-sizing: border-box;
 }
-.section-slider__arrow--left {
-  margin-top: -0.5rem;
-  margin-left: 1.2rem;
-  z-index: 9999;
+.section-slider__container {
+  height: inherit;
+  position: relative;
 }
-.section-slider__arrow--left:hover {
-  cursor: pointer;
+#section-slider__slide-1 {
+  position: relative;
+  width: 100%;
+  /* width: 100%;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
 }
-.section-slider__arrow--right {
-  margin-top: -0.5rem;
-  margin-right: 1.1rem;
-  z-index: 9999;
-}
-.section-slider__vertical-phone {
-  margin-top: -0.5rem;
-  margin-right: 1.7rem;
-  /*position: relative;*/
+#section-slider__slide-2 {
+  position: relative;
+  width: 100%;
+  /* width: 100%;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
 }
 #section-slider__vertical-phone--housing {
-  /*position: absolute;*/
+  position: absolute;
+  top: 5.3rem;
+  left: 11.2rem;
+  cursor: pointer;
 }
 #section-slider__vertical-phone--screen {
   position: absolute;
+  top: 11.5rem;
+  left: 12.3rem;
 }
 #section-slider__horizontal-phone--housing {
-  /*position: absolute;*/
+  position: absolute;
+  top: 17.2rem;
+  right: 11rem;
+  cursor: pointer;
 }
 #section-slider__horizontal-phone--screen {
   position: absolute;
+  top: 18.25rem;
+  right: 19.75rem;
+}
+.section-slider__arrows {
+  position: relative;
+  top: -50%;
+  width: 1020px;
+}
+.section-slider__arrow--left {
+  position: absolute;
+  z-index: 9999;
+  cursor: pointer;
+  top: -2rem;
+  left: 4rem;
+}
+.section-slider__arrow--right {
+  position: absolute;
+  z-index: 9999;
+  cursor: pointer;
+  top: -2rem;
+  right: 4rem;
 }
 .section-slider__phone--screen--hidden {
   display: none;
-}
-.section-slider__horizontal-phone {
-  margin-top: -0.6rem;
-  margin-right: -0.1rem;
-}
-.section-slider__arrow--right:hover {
-  cursor: pointer;
 }
 .section-slider__slide--hidden {
   display: none;
