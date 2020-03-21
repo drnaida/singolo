@@ -50,7 +50,22 @@ function phoneSwitching2 () {
 
 
 /*Portfolio: switching tabs*/
-//1. Make active tabs
+//1. Make activation of tabs tabs
+//1.1 Call function on activation
+let portfolioNavigation = document.querySelector('.section-portfolio__navigation');
+portfolioNavigation.addEventListener('click', navigationActivation);
+//1.2 Make function
+function navigationActivation() {
+  let targetElement = event.target;
+  if (targetElement.tagName == 'SPAN') {
+    portfolioNavigation.querySelectorAll('span').forEach(item => {
+      item.classList.remove('section-portfolio__navigation--element-active');
+    });
+
+    targetElement.classList.add('section-portfolio__navigation--element-active');
+  }
+}
+//2. Make image to change position
 
 
 
