@@ -24,48 +24,54 @@ function onScroll(event) {
   }
 }
 /*Switching slides*/
-//1. Make all of important things variables
-let arrowLeft = document.getElementById('section-slider__arrow--left');
-let arrowRight = document.getElementById('section-slider__arrow--right');
-let firstSlide = document.getElementById('section-slider__slide-1');
-let secondSlide = document.getElementById('section-slider__slide-2');
-let slideCondition = 0;
-//2. Call function on clicling on the right and left buttons
-arrowLeft.addEventListener('click', switchLeft);
-arrowRight.addEventListener('click', switchRight);
-//
-function switchLeft() {
-  if (slideCondition) {
-    slideCondition = 0;
-    secondSlide.classList.add('section-slider__slide--hidden');
-    secondSlide.classList.add('slider-right-gone');
-    secondSlide.classList.remove('slider-left-gone');
-    secondSlide.classList.remove('slider-left');
-    secondSlide.classList.remove('slider-right');
-    firstSlide.classList.remove('section-slider__slide--hidden');
-    firstSlide.classList.add('slider-right');
-    firstSlide.classList.remove('slider-left-gone');
-    firstSlide.classList.remove('slider-left');
-    firstSlide.classList.remove('slider-right-gone');
-  } else {
-    slideCondition = 1;
-    firstSlide.classList.add('slider-left-gone');
-    secondSlide.classList.remove('section-slider__slide--hidden');
-    firstSlide.classList.add('section-slider__slide--hidden');
-    secondSlide.classList.add('slider-left');
-  }
+let items = document.querySelectorAll('.section-slider__slide');
+let sliderCondition = 0;
+let isTrue = true;
+
+function changeCurrentItem(n) {
+    sliderCondition = (n + items.length) % items.length;
 }
-function switchRight() {
-  if (slideCondition) {
-    slideCondition = 0;
-    secondSlide.classList.add('section-slider__slide--hidden');
-    firstSlide.classList.remove('section-slider__slide--hidden');
-  } else {
-    slideCondition = 1;
-    secondSlide.classList.remove('section-slider__slide--hidden');
-    firstSlide.classList.add('section-slider__slide--hidden');
-  }
+
+function hideItem(direction) {
+    isTrue = false;
+    items[sliderCondition].classList.add(direction);
+    items[sliderCondition].addEventListener('animationend', function() {
+        this.classList.remove('active', direction);
+    })
 }
+
+function showItem(direction) {
+    items[sliderCondition].classList.add('next', direction);
+    items[sliderCondition].addEventListener('animationend', function() {
+        this.classList.remove('next', direction);
+        this.classList.add('active');
+        isTrue = true;
+    })
+}
+
+function previousItem(n) {
+    hideItem('to-right');
+    changeCurrentItem(n - 1);
+    showItem('from-left');
+}
+
+function nextItem(n) {
+    hideItem('to-left');
+    changeCurrentItem(n + 1);
+    showItem('from-right');
+}
+document.getElementById('section-slider__arrow--left').addEventListener('click', function() {
+    if (isTrue) {
+        previousItem(sliderCondition);
+    }
+});
+document.getElementById('section-slider__arrow--right').addEventListener('click', function() {
+    if (isTrue) {
+        nextItem(sliderCondition);
+    }
+});
+
+
 /*Slider activation of phones*/
 document.getElementById('section-slider__vertical-phone--housing').addEventListener('click', phoneSwitching1);
 let phoneCondition1 = 1;
