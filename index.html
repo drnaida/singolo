@@ -7,26 +7,40 @@
     <link rel="stylesheet" href="fonts.css">
   </head>
   <body>
-    <header class="header">
+    <header class="header section">
       <h1 class="header__heading">Singolo<span>*</span></h1>
       <nav class="header-navigation">
         <ul class="header-navigation__list">
-          <li class="header-navigation__element"><a href="#" class="header-navigation__element--link" id="home">Home</a></li>
-          <li class="header-navigation__element"><a href="#" class="header-navigation__element--link" id="services">Services</a></li>
-          <li class="header-navigation__element"><a href="#" class="header-navigation__element--link" id="portfolio">Portfolio</a></li>
-          <li class="header-navigation__element"><a href="#" class="header-navigation__element--link">About</a></li>
-          <li class="header-navigation__element"><a href="#" class="header-navigation__element--link">Contact</a></li>
+          <li class="header-navigation__element"><a class="header-navigation__element--link header-navigation__element--active" id="home" href="#section-home">Home</a></li>
+          <li class="header-navigation__element"><a class="header-navigation__element--link" id="services" href="#section-services">Services</a></li>
+          <li class="header-navigation__element"><a class="header-navigation__element--link" id="portfolio" href="#section-portfolio">Portfolio</a></li>
+          <li class="header-navigation__element"><a class="header-navigation__element--link" href="#section-about">About</a></li>
+          <li class="header-navigation__element"><a class="header-navigation__element--link" href="#section-contact">Contact</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <section class="section-slider">
-        <img class="section-slider__arrow--left" src="assets/arrow-left.png" alt="Icon of left arrow">
-        <img class="section-slider__vertical-phone" src="assets/verticalPhone.png" alt="Vertical Phone">
-        <img class="section-slider__horizontal-phone" src="assets/horizontalPhone.png" alt="Horizontal Phone">
-        <img class="section-slider__arrow--right" src="assets/arrow-right.png" alt="Icon of right arrow">
+      <section class="section-slider section" id="section-home">
+        <div class="section-slider__container">
+          <div id="section-slider__slide-1" class="section-slider__slide section-slider__slide--active">
+            <img id="section-slider__vertical-phone--housing" src="assets/verticalPhone.png" alt="Vertical Phone Housing">
+            <img id="section-slider__vertical-phone--screen" class="" src="assets/verticalPhoneScreen.png" alt="Vertical Phone Screen">
+            <img id="section-slider__horizontal-phone--housing" src="assets/horizontalPhone.png" alt="Horizontal Phone Housing">
+            <img id="section-slider__horizontal-phone--screen" class="" src="assets/horizontalPhoneScreen.png" alt="Horizontal Phone Screen">
+          </div>
+          <div id="section-slider__slide-2" class="section-slider__slide">
+            <img src="assets/slide-2.png" alt="Second Slide">
+          </div>
+        </div>
+        <div class="section-slider__arrows">
+          <img class="section-slider__arrow--left" id="section-slider__arrow--left" src="assets/arrow-left.png" alt="Icon of left arrow">
+          <img class="section-slider__arrow--right" id="section-slider__arrow--right" src="assets/arrow-right.png" alt="Icon of right arrow">
+        </div>
+
       </section>
-      <section class="section-our-services">
+
+
+      <section class="section-our-services section" id="section-services">
         <h2 class="section-our-services__heading">Our Services</h2>
         <p class="section-our-services__paragraph">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
         <div class="section-our-services__content">
@@ -107,41 +121,41 @@
           </div>
         </div>
       </section>
-      <section class="section-portfolio">
+      <section class="section-portfolio section" id="section-portfolio">
         <h2 class="section-portfolio__heading">Portfolio</h2>
         <p class="section-portfolio__paragraph">
           Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
         </p>
         <div class="section-portfolio__navigation">
-          <div class="section-portfolio__navigation--element section-portfolio__navigation--element--1">All</div>
-          <div class="section-portfolio__navigation--element">Web Design</div>
-          <div class="section-portfolio__navigation--element">Graphic Design</div>
-          <div class="section-portfolio__navigation--element section-portfolio__navigation--element--4">Artwork</div>
+          <span class="section-portfolio__navigation--element section-portfolio__navigation--element--1 section-portfolio__navigation--element-active">All</span>
+          <span class="section-portfolio__navigation--element">Web Design</span>
+          <span class="section-portfolio__navigation--element">Graphic Design</span>
+          <span class="section-portfolio__navigation--element section-portfolio__navigation--element--4">Artwork</span>
         </div>
         <div class="section-portfolio__content">
           <div class="section-portfolio__content--column">
-            <div class="section-portfolio__content--element section-portfolio__content--element--1"></div>
-            <div class="section-portfolio__content--element section-portfolio__content--element--2"></div>
-            <div class="section-portfolio__content--element section-portfolio__content--element--3"></div>
+            <img class="section-portfolio__content--element" src="assets/portfolio-image-1.png">
+            <img class="section-portfolio__content--element" src="assets/portfolio-image-2.png">
+            <img class="section-portfolio__content--element" src="assets/portfolio-image-3.png">
           </div>
           <div class="section-portfolio__content--column">
-            <div class="section-portfolio__content--element section-portfolio__content--element--4"></div>
-            <div class="section-portfolio__content--element section-portfolio__content--element--5"></div>
-            <div class="section-portfolio__content--element section-portfolio__content--element--6"></div>
+            <img class="section-portfolio__content--element" src="assets/portfolio-image-4.png">
+            <img class="section-portfolio__content--element" src="assets/portfolio-image-5.png">
+            <img class="section-portfolio__content--element" src="assets/portfolio-image-6.png">
           </div>
           <div class="section-portfolio__content--column">
-            <div class="section-portfolio__content--element section-portfolio__content--element--7"></div>
-            <div class="section-portfolio__content--element section-portfolio__content--element--8"></div>
-            <div class="section-portfolio__content--element section-portfolio__content--element--9"></div>
+            <img class="section-portfolio__content--element" src="assets/portfolio-image-7.png">
+            <img class="section-portfolio__content--element" src="assets/portfolio-image-8.png">
+            <img class="section-portfolio__content--element" src="assets/portfolio-image-9.png">
           </div>
           <div class="section-portfolio__content--column">
-            <div class="section-portfolio__content--element section-portfolio__content--element--10"></div>
-            <div class="section-portfolio__content--element section-portfolio__content--element--11"></div>
-            <div class="section-portfolio__content--element section-portfolio__content--element--12"></div>
+            <img class="section-portfolio__content--element" src="assets/portfolio-image-10.png">
+            <img class="section-portfolio__content--element" src="assets/portfolio-image-11.png">
+            <img class="section-portfolio__content--element" src="assets/portfolio-image-12.png">
           </div>
         </div>
       </section>
-      <section class="section-about-us">
+      <section class="section-about-us section" id="section-about">
         <h2 class="section-about-us__heading">
           About Us
         </h2>
@@ -196,7 +210,7 @@
           </div>
         </div>
       </section>
-      <section class="section-contact">
+      <section class="section-contact section" id="section-contact">
         <h2 class="section-contact__heading-secondary">
           Get a Quote
         </h2>
@@ -205,12 +219,12 @@
         </p>
         <div class="section-contact__content">
           <div class="section-contact__form">
-            <form class="section-contact__form-content" action="index.html" method="post">
-              <input type="text" name="" value="" required class="section-contact__form--input" placeholder="Name (Required)">
-              <input type="email" name="" value="" required class="section-contact__form--input" placeholder="Email (Required)">
-              <input type="text" name="" value="" class="section-contact__form--input" placeholder="Subject">
-              <input type="text" name="" value="" class="section-contact__form--input" placeholder="Describe your project in detail...">
-              <button type="submit" name="button" class="section-contact__form-content--button">Submit</button>
+            <form class="section-contact__form-content" action="#section-contact" id="section-contact__form">
+              <input type="text" value="" required class="section-contact__form--input" id="section-contact__form--input-name" placeholder="Name (Required)">
+              <input type="email" value="" required class="section-contact__form--input" id="section-contact__form--input-email" placeholder="Email (Required)">
+              <input type="text" value="" class="section-contact__form--input" id="section-contact__form--input-subject" placeholder="Subject">
+              <input type="text" value="" class="section-contact__form--input" id="section-contact__form--input-description" placeholder="Describe your project in detail...">
+              <button type="submit" class="section-contact__form-content--button" id="section-contact__button">Submit</button>
             </form>
           </div>
           <div class="section-contact__aside">
@@ -245,5 +259,24 @@
         </div>
       </footer>
     </main>
+    <script type="text/javascript" src="script.js">
+
+    </script>
+    <div class="section-contact-popup section-contact-popup--hidden" id="popup">
+      <div class="section-contact-popup__content">
+        <span class="section-contact-popup__span">
+          The letter was sent
+        </span>
+        <span class="section-contact-popup__span" id="section-contact-popup__span--subject">
+          sfsdfsdf
+        </span>
+        <span class="section-contact-popup__span" id="section-contact-popup__span--description">
+          sfsdfsd
+        </span>
+        <button class="section-contact-popup__button" id="section-contact-popup__button">
+          Ok
+        </button>
+      </div>
+    </div>
   </body>
 </html>
