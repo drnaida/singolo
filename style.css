@@ -22,6 +22,7 @@ body {
   width: 100%;
   max-width: 1020px;
   z-index: 10000;
+  transition: all .2s;
 }
 .header__heading {
   text-transform: uppercase;
@@ -45,9 +46,6 @@ body {
   margin-left: 2.8rem;
   color: #666d89;
 }
-.header-navigation__element--active {
-  color: #f06c64;
-}
 .header-navigation__element:first-child {
   list-style: none;
 }
@@ -65,6 +63,9 @@ body {
 .header-navigation__element--link:active {
   cursor: pointer;
   text-decoration: underline;
+}
+.header-navigation__element--active {
+  color: #f06c64;
 }
 #home {
   margin-right: 0.1rem;

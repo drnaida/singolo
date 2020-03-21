@@ -4,18 +4,24 @@ document.addEventListener('scroll', onScroll);
 function onScroll(event) {
   const curPos = window.scrollY;
   const divs = document.querySelectorAll('.section');
-  const links = document.querySelectorAll('.header-navigation__list > li > a');
-  divs.forEach((el) => {
-    if (el.offsetTop <= curPos && (el.offsetTop + el.offSetHeight) > curPos) {
-      links.forEach((a) => {
+  const links = document.querySelectorAll('.header-navigation__list li a');
+  divs.forEach(el => {
+    if (el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight) > curPos) {
+      links.forEach(a => {
         a.classList.remove('header-navigation__element--active');
         if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
           a.classList.add('header-navigation__element--active');
         }
       });
-
     }
   });
+  /*Making header smaller on scroll*/
+  let header = document.querySelector(".header")
+  if (window.pageYOffset > 100) {
+    header.style.height = '3.9rem';
+  } else {
+    header.style.height = '8.9rem';
+  }
 }
 /*Switching slides*/
 //1. Make all of important things variables
@@ -32,13 +38,21 @@ function switchLeft() {
   if (slideCondition) {
     slideCondition = 0;
     secondSlide.classList.add('section-slider__slide--hidden');
-    secondSlide.classList.add('slider-left-gone');
+    secondSlide.classList.add('slider-right-gone');
+    secondSlide.classList.remove('slider-left-gone');
+    secondSlide.classList.remove('slider-left');
+    secondSlide.classList.remove('slider-right');
     firstSlide.classList.remove('section-slider__slide--hidden');
-    firstSlide.classList.add('slider-left');
+    firstSlide.classList.add('slider-right');
+    firstSlide.classList.remove('slider-left-gone');
+    firstSlide.classList.remove('slider-left');
+    firstSlide.classList.remove('slider-right-gone');
   } else {
     slideCondition = 1;
+    firstSlide.classList.add('slider-left-gone');
     secondSlide.classList.remove('section-slider__slide--hidden');
     firstSlide.classList.add('section-slider__slide--hidden');
+    secondSlide.classList.add('slider-left');
   }
 }
 function switchRight() {
