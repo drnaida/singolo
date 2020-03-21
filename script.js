@@ -5,8 +5,9 @@ function onScroll(event) {
   const curPos = window.scrollY;
   const divs = document.querySelectorAll('.section');
   const links = document.querySelectorAll('.header-navigation__list li a');
+  console.log(links);
   divs.forEach(el => {
-    if (el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight) > curPos) {
+    if ((el.offsetTop - 400) <= curPos && (el.offsetTop + el.offsetHeight) > curPos) {
       links.forEach(a => {
         a.classList.remove('header-navigation__element--active');
         if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
