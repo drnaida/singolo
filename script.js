@@ -18,16 +18,28 @@ function onScroll(event) {
   });
 }
 /*Slider activation of phones*/
-document.getElementById('section-slider__vertical-phone--housing').addEventListener('click', phoneSwitching);
-//document.getElementById('section-slider__horizontal-phone').addEventListener('click', phoneSwitching2);
-let phoneCondition = 1;
-function phoneSwitching () {
-  if (phoneCondition) {
-    phoneCondition = 0;
-    console.log(phoneCondition);
+document.getElementById('section-slider__vertical-phone--housing').addEventListener('click', phoneSwitching1);
+let phoneCondition1 = 1;
+let verticalPhoneScreen = document.getElementById('section-slider__vertical-phone--screen');
+function phoneSwitching1 () {
+  if (phoneCondition1) {
+    phoneCondition1 = 0;
+    verticalPhoneScreen.classList.add('section-slider__phone--screen--hidden');
   } else {
-    phoneCondition = 1;
-    console.log(phoneCondition);
+    phoneCondition1 = 1;
+    verticalPhoneScreen.classList.remove('section-slider__phone--screen--hidden');
+  }
+}
+document.getElementById('section-slider__horizontal-phone--housing').addEventListener('click', phoneSwitching2);
+let phoneCondition2 = 1;
+let horizontalPhoneScreen = document.getElementById('section-slider__horizontal-phone--screen');
+function phoneSwitching2 () {
+  if (phoneCondition2) {
+    phoneCondition2 = 0;
+    horizontalPhoneScreen.classList.add('section-slider__phone--screen--hidden');
+  } else {
+    phoneCondition2 = 1;
+    horizontalPhoneScreen.classList.remove('section-slider__phone--screen--hidden');
   }
 }
 
@@ -44,17 +56,20 @@ function phoneSwitching () {
 
 /*Portfolio: interaction with images*/
 //1. Call function on clicking on the image
-document.querySelectorAll('.section-portfolio__content--element').addEventListener('click', borderAppearing);
-//2. Create border for the the image with color: #F06C64 and width: 5px
-borderCondition = 0;
+let portfolioContent = document.querySelector('.section-portfolio__content');
+portfolioContent.addEventListener('click', borderAppearing);
 function borderAppearing () {
-  if (borderCondition) {
-    borderCondition = 0;
-  } else {
-    borderCondition = 1;
+  let targetElement = event.target;
+  //Make protection from not image elements
+  if (targetElement.tagName == 'IMG') {
+      //Delete all of the outlines
+      portfolioContent.querySelectorAll('img').forEach(item => {
+        item.style.outline = 'none';
+      });
+      //Add outline to target element
+      targetElement.style.outline = '5px solid #F06C64';
   }
 }
-//3. If another one image is clicked, remove the border and add to another one
 
 
 

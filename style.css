@@ -19,6 +19,7 @@ body {
   color: #ffffff;
   position: fixed;
   width: 100%;
+  max-width: 1020px;
 }
 .header__heading {
   text-transform: uppercase;
@@ -97,13 +98,22 @@ body {
 .section-slider__vertical-phone {
   margin-top: -0.5rem;
   margin-right: 1.7rem;
-  position: relative;
+  /*position: relative;*/
 }
 #section-slider__vertical-phone--housing {
-  position: absolute;
+  /*position: absolute;*/
 }
 #section-slider__vertical-phone--screen {
   position: absolute;
+}
+#section-slider__horizontal-phone--housing {
+  /*position: absolute;*/
+}
+#section-slider__horizontal-phone--screen {
+  position: absolute;
+}
+.section-slider__phone--screen--hidden {
+  display: none;
 }
 .section-slider__horizontal-phone {
   margin-top: -0.6rem;
@@ -247,8 +257,6 @@ span {
 .section-portfolio__content {
   display: flex;
   flex-direction: row;
-  /* justify-content: space-between; */
-  overflow: hidden;
 }
 .section-portfolio__content--column {
   display: flex;
@@ -260,42 +268,6 @@ span {
   width: 22rem;
   margin-bottom: 2rem;
   cursor: pointer;
-}
-.section-portfolio__content--element--1 {
-  background-image: url(assets/portfolio-image-1.png);
-}
-.section-portfolio__content--element--2 {
-  background-image: url(assets/portfolio-image-2.png);
-}
-.section-portfolio__content--element--3 {
-  background-image: url(assets/portfolio-image-3.png);
-}
-.section-portfolio__content--element--4 {
-  background-image: url(assets/portfolio-image-4.png);
-}
-.section-portfolio__content--element--5 {
-  background-image: url(assets/portfolio-image-5.png);
-}
-.section-portfolio__content--element--6 {
-  background-image: url(assets/portfolio-image-6.png);
-}
-.section-portfolio__content--element--7 {
-  background-image: url(assets/portfolio-image-7.png);
-}
-.section-portfolio__content--element--8 {
-  background-image: url(assets/portfolio-image-8.png);
-}
-.section-portfolio__content--element--9 {
-  background-image: url(assets/portfolio-image-9.png);
-}
-.section-portfolio__content--element--10 {
-  background-image: url(assets/portfolio-image-10.png);
-}
-.section-portfolio__content--element--11 {
-  background-image: url(assets/portfolio-image-11.png);
-}
-.section-portfolio__content--element--12 {
-  background-image: url(assets/portfolio-image-12.png);
 }
 .section-about-us {
   height: 73.5rem;
