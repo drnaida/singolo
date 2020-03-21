@@ -142,16 +142,16 @@ body {
 }
 .section-slider__slide {
   display: none;
-  animation: 0.5s ease-in-out;
+  animation: 1s ease-in-out;
 }
-.section-slider__slide.active {
+.section-slider__slide .section-slider__slide--active {
+  display: block;
+}
+.section-slider__slide--active,
+.section-slider__slide--next {
     display: block;
 }
-.active,
-.next {
-    display: block;
-}
-.next {
+.section-slider__slide--next {
     position: absolute;
     top: 0;
     width: 100%;
@@ -174,19 +174,19 @@ body {
     animation-name: right;
 }
 @keyframes left {
-    from {
+    0% {
         left: 0;
     }
-    to {
+    100% {
         left: -100%;
     }
 }
 
 @keyframes right {
-    from {
+    0% {
         left: 100%;
     }
-    to {
+    100% {
         left: 0;
     }
 }

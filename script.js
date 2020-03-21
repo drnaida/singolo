@@ -24,52 +24,46 @@ function onScroll(event) {
   }
 }
 /*Switching slides*/
+//Put important information in variables
 let items = document.querySelectorAll('.section-slider__slide');
 let sliderCondition = 0;
 let isTrue = true;
-
 function changeCurrentItem(n) {
     sliderCondition = (n + items.length) % items.length;
 }
-
+//function to hide item
 function hideItem(direction) {
     isTrue = false;
     items[sliderCondition].classList.add(direction);
     items[sliderCondition].addEventListener('animationend', function() {
-        this.classList.remove('active', direction);
+        this.classList.remove('section-slider__slide--active', direction);
     })
 }
-
+//function to show item
 function showItem(direction) {
-    items[sliderCondition].classList.add('next', direction);
+    items[sliderCondition].classList.add('section-slider__slide--next', direction);
     items[sliderCondition].addEventListener('animationend', function() {
-        this.classList.remove('next', direction);
-        this.classList.add('active');
+        this.classList.remove('section-slider__slide--next', direction);
+        this.classList.add('section-slider__slide--active');
         isTrue = true;
     })
 }
-
+//function previous item
 function previousItem(n) {
     hideItem('to-right');
     changeCurrentItem(n - 1);
     showItem('from-left');
 }
-
+//function next item
 function nextItem(n) {
     hideItem('to-left');
     changeCurrentItem(n + 1);
     showItem('from-right');
 }
-document.getElementById('section-slider__arrow--left').addEventListener('click', function() {
-    if (isTrue) {
-        previousItem(sliderCondition);
-    }
-});
-document.getElementById('section-slider__arrow--right').addEventListener('click', function() {
-    if (isTrue) {
-        nextItem(sliderCondition);
-    }
-});
+//Call function when left button is clicked
+document.getElementById('section-slider__arrow--left').addEventListener('click', function() { if (isTrue) previousItem(sliderCondition); });
+//Call function when right button is clicked
+document.getElementById('section-slider__arrow--right').addEventListener('click', function() { if (isTrue) nextItem(sliderCondition); });
 
 
 /*Slider activation of phones*/
