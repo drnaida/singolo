@@ -5,7 +5,6 @@ function onScroll(event) {
   const curPos = window.scrollY;
   const divs = document.querySelectorAll('.section');
   const links = document.querySelectorAll('.header-navigation__list li a');
-  console.log(links);
   divs.forEach(el => {
     if ((el.offsetTop - 400) <= curPos && (el.offsetTop + el.offsetHeight) > curPos) {
       links.forEach(a => {
@@ -176,7 +175,7 @@ function borderAppearing () {
 
 /*Get a quote*/
 //1. Call function on cliking on the button
-document.getElementById('section-contact__button').addEventListener('click', popupWithFormData);
+document.getElementById('section-contact__form').addEventListener('submit', popupWithFormData);
 let popupCondition = 0;
 function popupWithFormData () {
   //2. Get values of Subject and Description inputs
