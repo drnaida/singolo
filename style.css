@@ -795,6 +795,9 @@ span {
     color: green;
     transform: translateX(1rem);
   }
+  .navigation__link--active:link, .navigation__link--active:visited {
+    color: #f06c64;
+  }
   .navigation__checkbox:checked ~ .navigation__background {
     transform: scaleX(10);
   }
