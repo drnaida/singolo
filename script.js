@@ -16,11 +16,13 @@ function onScroll(event) {
     }
   });
   /*Making header smaller on scroll*/
-  let header = document.querySelector(".header")
-  if (window.pageYOffset > 100) {
+  let header = document.querySelector(".header");
+  if (window.pageYOffset > 100 && window.innerWidth > 768) {
     header.style.height = '3.9rem';
-  } else {
+  } else if (window.innerWidth > 768) {
     header.style.height = '8.9rem';
+  } else {
+    header.style.height = '7.1rem';
   }
 }
 /*Switching slides*/
@@ -150,6 +152,7 @@ function shuffle(event) {
     //Replace src by indexes in srcArray with random order
     portfolioImages.forEach((item, index) => {
         item.src = srcArray[randomArray[index]];
+        item.style.outline = 'none';
     });
   }
 }
@@ -212,4 +215,34 @@ function popupWithFormData () {
     popup.classList.add('section-contact-popup--hidden');
     form.reset();
   }
+}
+//Closing of mobile menu
+let navigationList = document.querySelector('.navigation__list');
+navigationList.addEventListener('click', mobileMenuClose);
+function mobileMenuClose () {
+  let targetElement = event.target;
+  //Make protection from not image elements
+  if (targetElement.tagName == 'A') {
+    document.getElementById("navi-toggle").checked = false;
+    console.log('False');
+  }
+}
+
+//Make active mobile menu on scroll
+document.addEventListener('scroll', onScrollMobile);
+
+function onScrollMobile(event) {
+  const curPos = window.scrollY;
+  const divs = document.querySelectorAll('.section');
+  const links = document.querySelectorAll('.navigation__list span a');
+  divs.forEach(el => {
+    if ((el.offsetTop - 200) <= curPos && (el.offsetTop + el.offsetHeight) > curPos) {
+      links.forEach(a => {
+        a.classList.remove('navigation__link--active');
+        if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
+          a.classList.add('navigation__link--active');
+        }
+      });
+    }
+  });
 }

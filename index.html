@@ -5,8 +5,28 @@
     <title>Singolo</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="fonts.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
+    <div class="navigation">
+      <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+      <label for="navi-toggle" class="navigation__button">
+        <span class="navigation__icon">
+        </span>
+      </label>
+      <h1 class="header__heading" id="header__heading--mobile">Singolo<span>*</span></h1>
+      <div class="navigation__background">
+      </div>
+      <div class="navigation__nav">
+        <div class="navigation__list">
+          <span class="navigation__item"><a class="navigation__link navigation__link--active" href="#section-home">Home</a></span>
+          <span class="navigation__item"> <a href="#section-services" class="navigation__link">Services</a></span>
+          <span class="navigation__item"><a href="#section-portfolio" class="navigation__link">Portfolio</a></span>
+          <span class="navigation__item"><a href="#section-about" class="navigation__link">About</a></span>
+          <span class="navigation__item"><a href="#section-contact" class="navigation__link">Contact</a></span>
+        </div>
+      </div>
+    </div>
     <header class="header section">
       <h1 class="header__heading">Singolo<span>*</span></h1>
       <nav class="header-navigation">
@@ -44,7 +64,7 @@
         <h2 class="section-our-services__heading">Our Services</h2>
         <p class="section-our-services__paragraph">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
         <div class="section-our-services__content">
-          <div class="section-our-services__content--column">
+          <div class="section-our-services__content--row">
             <div class="section-our-services__content--element">
               <img src="assets/icon-pen.png" alt="Pen">
               <div class="section-our-services__content--column">
@@ -56,7 +76,32 @@
                 </p>
               </div>
             </div>
+            <div class="section-our-services__content--element section-our-services__content--element--2">
+              <img src="assets/icon-bulb.png" alt="Bulb">
+              <div class="section-our-services__content--column">
+                <h3 class="section-our-services__content--heading">
+                  Inovative Ideas
+                </h3>
+                <p class="section-our-services__content--paragraph section-our-services__content--paragraph--2">
+                  Quisque luctus, quam eget molestie com-modo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.
+                </p>
+              </div>
+            </div>
+            <div class="section-our-services__content--element section-our-services__content--element--3">
+              <img src="assets/icon-heart.png" alt="Heart">
+              <div class="section-our-services__content--column">
+                <h3 class="section-our-services__content--heading">
+                  Love Is The Answer
+                </h3>
+                <p class="section-our-services__content--paragraph section-our-services__content--paragraph--3">
+                  Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.
+                </p>
+              </div>
+            </div>
+          </div>
 
+
+          <div class="section-our-services__content--row section-our-services__content--column--2">
             <div class="section-our-services__content--element">
               <img src="assets/icon-phone.png" alt="Phone">
               <div class="section-our-services__content--column">
@@ -68,46 +113,19 @@
                 </p>
               </div>
             </div>
-          </div>
-
-
-          <div class="section-our-services__content--column section-our-services__content--column--2">
-            <div class="section-our-services__content--element">
-              <img src="assets/icon-bulb.png" alt="Bulb">
-              <div class="section-our-services__content--column">
-                <h3 class="section-our-services__content--heading">
-                  Inovative Ideas
-                </h3>
-                <p class="section-our-services__content--paragraph section-our-services__content--paragraph--2">
-                  Quisque luctus, quam eget molestie com-modo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.
-                </p>
-              </div>
-            </div>
-            <div class="section-our-services__content--element">
+            <div class="section-our-services__content--element section-our-services__content--element--4">
               <img src="assets/icon-bubble.png" alt="Bubble">
               <div class="section-our-services__content--column">
                 <h3 class="section-our-services__content--heading">
                   24 / 7 Support
                 </h3>
-                <p class="section-our-services__content--paragraph section-our-services__content--paragraph--2">
+                <p class="section-our-services__content--paragraph section-our-services__content--paragraph--4">
                   Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellentesque egestas venenatis lorem .
                 </p>
               </div>
             </div>
-          </div>
-          <div class="section-our-services__content--column section-our-services__content--column--3">
-            <div class="section-our-services__content--element">
-              <img src="assets/icon-heart.png" alt="Heart">
-              <div class="section-our-services__content--column">
-                <h3 class="section-our-services__content--heading">
-                  Love Is The Answer
-                </h3>
-                <p class="section-our-services__content--paragraph section-our-services__content--paragraph--3">
-                  Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.
-                </p>
-              </div>
-            </div>
-            <div class="section-our-services__content--element">
+
+            <div class="section-our-services__content--element section-our-services__content--element--5">
               <img src="assets/icon-star.png" alt="Star">
               <div class="section-our-services__content--column">
                 <h3 class="section-our-services__content--heading">
@@ -133,22 +151,20 @@
           <span class="section-portfolio__navigation--element section-portfolio__navigation--element--4">Artwork</span>
         </div>
         <div class="section-portfolio__content">
-          <div class="section-portfolio__content--column">
+          <div class="section-portfolio__content--row">
             <img class="section-portfolio__content--element" src="assets/portfolio-image-1.png">
             <img class="section-portfolio__content--element" src="assets/portfolio-image-2.png">
             <img class="section-portfolio__content--element" src="assets/portfolio-image-3.png">
-          </div>
-          <div class="section-portfolio__content--column">
             <img class="section-portfolio__content--element" src="assets/portfolio-image-4.png">
+          </div>
+          <div class="section-portfolio__content--row section-portfolio__content--row--2">
             <img class="section-portfolio__content--element" src="assets/portfolio-image-5.png">
             <img class="section-portfolio__content--element" src="assets/portfolio-image-6.png">
-          </div>
-          <div class="section-portfolio__content--column">
             <img class="section-portfolio__content--element" src="assets/portfolio-image-7.png">
             <img class="section-portfolio__content--element" src="assets/portfolio-image-8.png">
-            <img class="section-portfolio__content--element" src="assets/portfolio-image-9.png">
           </div>
-          <div class="section-portfolio__content--column">
+          <div class="section-portfolio__content--row section-portfolio__content--row-3">
+            <img class="section-portfolio__content--element" src="assets/portfolio-image-9.png">
             <img class="section-portfolio__content--element" src="assets/portfolio-image-10.png">
             <img class="section-portfolio__content--element" src="assets/portfolio-image-11.png">
             <img class="section-portfolio__content--element" src="assets/portfolio-image-12.png">

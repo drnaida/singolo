@@ -77,7 +77,7 @@ body {
   margin-right: 0.1rem;
 }
 .section-slider {
-  padding-top: 9.5rem;
+  padding-top: 5.5rem;
   height: 59.4rem;
   background-color: #f06c64;
   margin-bottom: 0;
@@ -215,29 +215,39 @@ body {
 }
 .section-our-services__content {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
+}
+.section-our-services__content--row {
+  display: flex;
+  flex-direction: row;
+  min-width: 0%;
 }
 .section-our-services__content--column {
   display: flex;
   flex-direction: column;
   min-width: 0%;
 }
-.section-our-services__content--column--2 {
-  margin-left: 3rem;
-}
-.section-our-services__content--column--3 {
-
-}
 .section-our-services__content--element {
   display: flex;
   flex-direction: row;
-  margin-bottom: 2.4rem;
+  margin-bottom: 1.8rem;
 }
-
+.section-our-services__content--element--2 {
+  margin-left: 3rem;
+}
+.section-our-services__content--element--3 {
+  margin-left: 2.5rem;
+}
+.section-our-services__content--element--4 {
+  margin-left: 1.4rem;
+}
+.section-our-services__content--element--5 {
+  margin-left: -4.5rem;
+}
 .section-our-services__content--element img {
   height: 5.9rem;
-  margin-top: -0.3rem;
+  margin-top: 0.5rem;
   margin-right: 2.1rem;
 }
 .section-our-services__content--heading {
@@ -245,7 +255,7 @@ body {
   line-height: 1.786rem;
   font-weight: 900;
   color: #666d89;
-  margin-top: -3px;
+  margin-top: 4px;
   margin-bottom: -2px;
   overflow: hidden;
   word-spacing: -1px;
@@ -259,13 +269,16 @@ body {
   overflow: hidden;
 }
 .section-our-services__content--paragraph--1 {
-  width: 104%;
+  width: 98%;
 }
 .section-our-services__content--paragraph--2 {
   width: 92%;
 }
 .section-our-services__content--paragraph--3 {
   width: 100%;
+}
+.section-our-services__content--paragraph--4 {
+  width: 77%;
 }
 span {
   color: #f06c64;
@@ -326,18 +339,18 @@ span {
 }
 .section-portfolio__content {
   display: flex;
-  flex-direction: row;
-}
-.section-portfolio__content--column {
-  display: flex;
   flex-direction: column;
-  margin-right: 2rem;
+}
+.section-portfolio__content--row {
+  display: flex;
+  flex-direction: row;
 }
 .section-portfolio__content--element {
   height: 18.7rem;
   width: 22rem;
   margin-bottom: 2rem;
   cursor: pointer;
+  margin-right: 2rem;
 }
 .section-about-us {
   height: 73.5rem;
@@ -590,4 +603,480 @@ span {
 .link:visited {
   text-decoration: none;
   color: #f0d8d9;
+}
+#header__heading--mobile {
+  display: none;
+  z-index: 100000;
+  position: fixed;
+  top: 1.25rem;
+  left: 7.1rem;
+  color: #ffffff;
+}
+@media only screen and (max-width: 1020px) {
+  html {
+    overflow-x: hidden;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  .header {
+    width: 76.8rem;
+  }
+  .header-navigation {
+    margin-right: 4rem;
+  }
+  .section-slider {
+    height: 44.725rem;
+  }
+  #section-slider__vertical-phone--housing {
+    height: 34.426rem;
+    width: 16.236rem;
+    top: 5rem;
+    left: 11rem;
+  }
+  #section-slider__vertical-phone--screen {
+    height: 24rem;
+    width: 12.75rem;
+    top: 9.5rem;
+    left: 11.949rem;
+  }
+  #section-slider__horizontal-phone--housing {
+    height: 16.236rem;
+    width: 34.426rem;
+    top: 15.5rem;
+    right: 8.141rem;
+  }
+  #section-slider__horizontal-phone--screen {
+    height: 12.75rem;
+    width: 23.8rem;
+    top: 16.425rem;
+    right: 14.5rem;
+  }
+  #section-slider__slide-2 img {
+    height: 44.838rem;
+  }
+  .section-slider__arrows {
+    width: 76.8rem;
+  }
+  .section-slider__arrow--left {
+    left: 3rem;
+  }
+  .section-slider__arrow--right {
+    right: 3rem;
+  }
+  .section-our-services {
+    height: 65rem;
+  }
+  .section-our-services__content {
+    flex-direction: row;
+  }
+  .section-our-services__content--row {
+    flex-direction: column;
+  }
+  .section-portfolio {
+    height: 109.44rem;
+  }
+  .section-portfolio__content {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .section-portfolio__content--row {
+    flex-direction: column;
+  }
+  .section-portfolio__content--row-3 .section-portfolio__content--element {
+    margin-right: 0;
+  }
+  .section-about-us__content--element {
+    width: 21.894rem;
+  }
+  .section-about-us__content--image {
+    height: 21.894rem;
+    width: 21.894rem;
+  }
+  .section-contact {
+    height: 62.521rem;
+  }
+  .section-contact__form {
+    width: 47.2rem;
+  }
+  .section-contact__form--input {
+    width: 44.2rem;
+  }
+  .section-contact__aside--paragraph {
+    width: 18.5rem;
+  }
+  .section-our-services__content--element--2 {
+    margin-left: 0;
+  }
+  .section-our-services__content--element--3 {
+    margin-left: 0;
+  }
+  .section-our-services__content--element--4 {
+    margin-left: 0;
+  }
+  .section-our-services__content--element--5 {
+    margin-left: 0;
+  }
+  .section-our-services__content--paragraph--1 {
+    width: 220px;
+  }
+  .section-our-services__content--paragraph--2 {
+    width: 220px;
+  }
+  .section-our-services__content--paragraph--3 {
+    width: 220px;
+  }
+  .section-our-services__content--paragraph--4 {
+    width: 220px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  html {
+    overflow-x: hidden;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  .header {
+    justify-content: center;
+    width: 37.5rem;
+    height: 7.1rem;
+  }
+  .header__heading {
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+  .header-navigation {
+    display: none;
+  }
+
+  .navigation {
+    position: fixed;
+    z-index: 100000;
+    top: 1rem;
+    left: 1rem;
+  }
+  .navigation__checkbox {
+    display: none;
+  }
+
+  .navigation__button {
+    z-index: 2000;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .navigation__background {
+    height: 100%;
+    width: 6rem;
+    position: fixed;
+    top: 0;
+    left: -6rem;
+    background-color: #2d303a;
+    z-index: 1000;
+    transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+  }
+
+  .navigation__nav {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1500;
+    display: none;
+    opacity: 0;
+    width: 100%;
+    transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+  }
+  @keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    80% {
+        transform: translateX(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+  }
+  .navigation__list {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    width: 28rem;
+  }
+
+  .navigation__item {
+    margin: 1rem;
+  }
+
+  .navigation__link:link, .navigation__link:visited {
+    display: block;
+    font-size: 3rem;
+    font-weight: 300;
+    padding: 1rem 2rem;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .4s;
+  }
+  .navigation__link:hover, .navigation__link:active {
+    background-position: 100%;
+    color: green;
+    transform: translateX(1rem);
+  }
+  .navigation__link--active:link, .navigation__link--active:visited {
+    color: #f06c64;
+  }
+  .navigation__checkbox:checked ~ .navigation__background {
+    transform: scaleX(10);
+  }
+
+  .navigation__icon {
+    position: relative;
+  }
+  .navigation__icon,
+  .navigation__icon::before,
+  .navigation__icon::after {
+    width: 3rem;
+    height: 2px;
+    background-color: gray;
+    display: inline-block;
+    z-index: 2000;
+    top: 1rem;
+    left: 2rem;
+  }
+
+  .navigation__icon::before,
+  .navigation__icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all .2s;
+  }
+
+  .navigation__icon::before {
+    top: -.8rem;
+  }
+  .navigation__icon::after {
+    top: .8rem;
+  }
+
+  .navigation__button:hover .navigation__icon::before {
+    top: -1rem;
+  }
+
+  .navigation__button:hover .navigation__icon::after {
+    top: 1rem;
+  }
+
+  .navigation__checkbox:checked + .navigation__button .navigation__icon {
+    background-color: transparent;
+  }
+
+  .navigation__checkbox:checked + .navigation__button .navigation__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  .navigation__checkbox:checked + .navigation__button .navigation__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+  .navigation__checkbox:checked ~ .navigation__nav {
+    opacity: 1;
+    display: inline-block;
+  }
+  .navigation__checkbox:checked ~ #header__heading--mobile {
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    display: inline-block;
+  }
+  .section-slider {
+    height: 21.838rem;
+    padding-top: 7.7rem;
+  }
+  .section-slider__arrows {
+    width: 37.5rem;
+  }
+  .section-slider__arrow--left {
+    top: -1.174rem;
+    left: 1rem;
+  }
+  .section-slider__arrow--right {
+    top: -1.174rem;
+    right: 1rem;
+  }
+  #section-slider__vertical-phone--housing {
+    height: 16.81rem;
+    width: 7.928rem;
+    top: 2rem;
+    left: 5.118rem;
+  }
+  #section-slider__vertical-phone--screen {
+    height: 11.7rem;
+    width: 6.312rem;
+    top: 4.2rem;
+    left: 5.5rem;
+  }
+  #section-slider__horizontal-phone--housing {
+    height: 7.928rem;
+    width: 16.81rem;
+    top: 6.497rem;
+    right: 5.141rem;
+  }
+  #section-slider__horizontal-phone--screen {
+    height: 6.312rem;
+    width: 11.7rem;
+    top: 6.9rem;
+    right: 8.2rem;
+  }
+  #section-slider__slide-2 img {
+    height: 21.838rem;
+  }
+  .section-our-services {
+    height: 114.913rem;
+    padding: 4rem 3rem;
+  }
+  .section-our-services__heading {
+    margin-top: 4.5rem;
+    margin-bottom: 2rem;
+  }
+  .section-our-services__content {
+    flex-direction: column;
+  }
+  .section-our-services__content--column--2 {
+    margin-left: 0;
+  }
+  .section-portfolio {
+    height: 84.4rem;
+    padding: 4.2rem 3rem;
+  }
+  .section-portfolio__heading {
+    margin-top: 4.5rem;
+  }
+  .section-portfolio__content {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .section-portfolio__content--row {
+    flex-direction: column;
+  }
+  .section-portfolio__content--row--2 .section-portfolio__content--element {
+    margin-right: 0;
+  }
+  .section-portfolio__content--row .section-portfolio__content--element:last-child {
+    margin-bottom: 0;
+  }
+  .section-portfolio__content--row-3 {
+    display: none;
+  }
+  .section-portfolio__content--element {
+    height: 12.8rem;
+    width: 15.1rem;
+    margin-right: 1.4rem;
+    margin-bottom: 1.4rem;
+  }
+  .section-about-us {
+    height: 177.5rem;
+    padding: 5rem 3rem;
+  }
+  .section-about-us__content {
+    flex-direction: column;
+  }
+  .section-about-us__heading {
+    margin-top: 4.5rem;
+  }
+  .section-about-us__content--element {
+    width: 31.4rem;
+  }
+  .section-about-us__content--image {
+    height: 31.4rem;
+    width: 31.4rem;
+  }
+  .section-about-us__content--social-media-icons {
+    margin-bottom: 1.5rem;
+  }
+  .section-contact {
+    padding: 4.4rem 3rem 6.1rem 3rem;
+    height: 96.9rem;
+    box-sizing: border-box;
+  }
+  .section-contact__heading-secondary {
+    margin-top: 4.5rem;
+  }
+  .section-contact__form {
+    width: 31.5rem;
+  }
+  .section-contact__form--input {
+    width: 31.5rem;
+    box-sizing: border-box;
+  }
+  .section-contact__content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .section-contact__paragraph {
+    margin-bottom: 1.9rem;
+  }
+  .section-contact__form--input:nth-child(4) {
+    height: 15.9rem;
+    padding: 0 1.5rem 11.9rem 1.5rem;
+    word-break: break-all;
+  }
+  .section-contact__form-content--button {
+    padding: 1.5rem 13.5rem;
+    margin-bottom: 3.2rem;
+  }
+  .section-contact__aside {
+    padding: 0;
+  }
+  .section-contact__aside--paragraph {
+    width: 30.5rem;
+  }
+  .footer {
+    justify-content: center;
+  }
+  .footer__copyright {
+    display: none;
+  }
+  .footer__social-media-icons {
+    margin: 0;
+  }
+  .section-our-services__content--element--2 {
+    margin-left: 0;
+  }
+  .section-our-services__content--element--3 {
+    margin-left: 0;
+  }
+  .section-our-services__content--element--4 {
+    margin-left: 0;
+  }
+  .section-our-services__content--element--5 {
+    margin-left: 0;
+  }
+  .section-our-services__content--paragraph--1 {
+    width: 100%;
+  }
+  .section-our-services__content--paragraph--2 {
+    width: 100%;
+  }
+  .section-our-services__content--paragraph--3 {
+    width: 100%;
+  }
+  .section-our-services__content--paragraph--4 {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 374px) {
+
 }
