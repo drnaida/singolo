@@ -215,19 +215,18 @@ body {
 }
 .section-our-services__content {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
+}
+.section-our-services__content--row {
+  display: flex;
+  flex-direction: row;
+  min-width: 0%;
 }
 .section-our-services__content--column {
   display: flex;
   flex-direction: column;
   min-width: 0%;
-}
-.section-our-services__content--column--2 {
-  margin-left: 3rem;
-}
-.section-our-services__content--column--3 {
-
 }
 .section-our-services__content--element {
   display: flex;
@@ -592,7 +591,98 @@ span {
   color: #f0d8d9;
 }
 @media only screen and (max-width: 1020px) {
-
+  html {
+    overflow-x: hidden;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  .header {
+    width: 76.8rem;
+  }
+  .header-navigation {
+    margin-right: 4rem;
+  }
+  .section-slider {
+    height: 44.725rem;
+  }
+  #section-slider__vertical-phone--housing {
+    height: 34.426rem;
+    width: 16.236rem;
+    top: 5rem;
+    left: 11rem;
+  }
+  #section-slider__vertical-phone--screen {
+    height: 24rem;
+    width: 12.75rem;
+    top: 9.5rem;
+    left: 11.949rem;
+  }
+  #section-slider__horizontal-phone--housing {
+    height: 16.236rem;
+    width: 34.426rem;
+    top: 15.5rem;
+    right: 8.141rem;
+  }
+  #section-slider__horizontal-phone--screen {
+    height: 12.75rem;
+    width: 23.8rem;
+    top: 16.425rem;
+    right: 14.5rem;
+  }
+  #section-slider__slide-2 img {
+    height: 44.838rem;
+  }
+  .section-slider__arrows {
+    width: 76.8rem;
+  }
+  .section-slider__arrow--left {
+    left: 3rem;
+  }
+  .section-slider__arrow--right {
+    right: 3rem;
+  }
+  .section-our-services {
+    height: 60rem;
+  }
+  .section-our-services__content {
+    flex-direction: row;
+  }
+  .section-our-services__content--row {
+    flex-direction: column;
+  }
+  .section-portfolio {
+    height: 109.44rem;
+  }
+  .section-portfolio__content {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .section-portfolio__content--row {
+    flex-direction: column;
+  }
+  .section-portfolio__content--row-3 .section-portfolio__content--element {
+    margin-right: 0;
+  }
+  .section-about-us__content--element {
+    width: 21.894rem;
+  }
+  .section-about-us__content--image {
+    height: 21.894rem;
+    width: 21.894rem;
+  }
+  .section-contact {
+    height: 62.521rem;
+  }
+  .section-contact__form {
+    width: 47.2rem;
+  }
+  .section-contact__form--input {
+    width: 44.2rem;
+  }
+  .section-contact__aside--paragraph {
+    width: 18.5rem;
+  }
 }
 @media only screen and (max-width: 767px) {
   html {
@@ -603,7 +693,7 @@ span {
   }
   .header {
     justify-content: center;
-    width: 375px;
+    width: 37.5rem;
   }
   .header__heading {
     margin-left: 0;
@@ -615,25 +705,28 @@ span {
   .section-slider {
     height: 21.838rem;
   }
+  .section-slider__arrows {
+    width: 37.5rem;
+  }
   .section-slider__arrow--left {
     top: -1.174rem;
-    left: 0.976rem;
+    left: 1rem;
   }
   .section-slider__arrow--right {
     top: -1.174rem;
-    left: 34.976rem;
+    right: 1rem;
   }
   #section-slider__vertical-phone--housing {
     height: 16.81rem;
     width: 7.928rem;
     top: 2rem;
-    left: 4.118rem;
+    left: 5.118rem;
   }
   #section-slider__vertical-phone--screen {
     height: 11.7rem;
     width: 6.312rem;
     top: 4.2rem;
-    left: 4.5rem;
+    left: 5.5rem;
   }
   #section-slider__horizontal-phone--housing {
     height: 7.928rem;
@@ -675,20 +768,34 @@ span {
   .section-portfolio__content--row {
     flex-direction: column;
   }
+  .section-portfolio__content--row--2 .section-portfolio__content--element {
+    margin-right: 0;
+  }
+  .section-portfolio__content--row .section-portfolio__content--element:last-child {
+    margin-bottom: 0;
+  }
   .section-portfolio__content--row-3 {
     display: none;
   }
   .section-portfolio__content--element {
     height: 12.8rem;
     width: 15.1rem;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
+    margin-right: 1.4rem;
+    margin-bottom: 1.4rem;
   }
   .section-about-us {
     height: 177.5rem;
+    padding: 5rem 3rem;
   }
   .section-about-us__content {
     flex-direction: column;
+  }
+  .section-about-us__content--element {
+    width: 31.4rem;
+  }
+  .section-about-us__content--image {
+    height: 31.4rem;
+    width: 31.4rem;
   }
   .section-about-us__content--social-media-icons {
     margin-bottom: 1.5rem;
@@ -699,7 +806,7 @@ span {
     box-sizing: border-box;
   }
   .section-contact__form {
-    width: 37.5rem;
+    width: 31.5rem;
   }
   .section-contact__form--input {
     width: 31.5rem;
@@ -723,6 +830,9 @@ span {
   }
   .section-contact__aside {
     padding: 0;
+  }
+  .section-contact__aside--paragraph {
+    width: 30.5rem;
   }
   .footer {
     justify-content: center;
