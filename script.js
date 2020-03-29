@@ -152,6 +152,7 @@ function shuffle(event) {
     //Replace src by indexes in srcArray with random order
     portfolioImages.forEach((item, index) => {
         item.src = srcArray[randomArray[index]];
+        item.style.outline = 'none';
     });
   }
 }
