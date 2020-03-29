@@ -77,7 +77,7 @@ body {
   margin-right: 0.1rem;
 }
 .section-slider {
-  padding-top: 9.5rem;
+  padding-top: 5.5rem;
   height: 59.4rem;
   background-color: #f06c64;
   margin-bottom: 0;
@@ -231,12 +231,23 @@ body {
 .section-our-services__content--element {
   display: flex;
   flex-direction: row;
-  margin-bottom: 2.4rem;
+  margin-bottom: 1.8rem;
 }
-
+.section-our-services__content--element--2 {
+  margin-left: 3rem;
+}
+.section-our-services__content--element--3 {
+  margin-left: 2.5rem;
+}
+.section-our-services__content--element--4 {
+  margin-left: 1.4rem;
+}
+.section-our-services__content--element--5 {
+  margin-left: -4.5rem;
+}
 .section-our-services__content--element img {
   height: 5.9rem;
-  margin-top: -0.3rem;
+  margin-top: 0.5rem;
   margin-right: 2.1rem;
 }
 .section-our-services__content--heading {
@@ -244,7 +255,7 @@ body {
   line-height: 1.786rem;
   font-weight: 900;
   color: #666d89;
-  margin-top: -3px;
+  margin-top: 4px;
   margin-bottom: -2px;
   overflow: hidden;
   word-spacing: -1px;
@@ -258,13 +269,16 @@ body {
   overflow: hidden;
 }
 .section-our-services__content--paragraph--1 {
-  width: 104%;
+  width: 98%;
 }
 .section-our-services__content--paragraph--2 {
   width: 92%;
 }
 .section-our-services__content--paragraph--3 {
   width: 100%;
+}
+.section-our-services__content--paragraph--4 {
+  width: 77%;
 }
 span {
   color: #f06c64;
@@ -651,7 +665,7 @@ span {
     right: 3rem;
   }
   .section-our-services {
-    height: 60rem;
+    height: 65rem;
   }
   .section-our-services__content {
     flex-direction: row;
@@ -690,6 +704,30 @@ span {
   }
   .section-contact__aside--paragraph {
     width: 18.5rem;
+  }
+  .section-our-services__content--element--2 {
+    margin-left: 0;
+  }
+  .section-our-services__content--element--3 {
+    margin-left: 0;
+  }
+  .section-our-services__content--element--4 {
+    margin-left: 0;
+  }
+  .section-our-services__content--element--5 {
+    margin-left: 0;
+  }
+  .section-our-services__content--paragraph--1 {
+    width: 220px;
+  }
+  .section-our-services__content--paragraph--2 {
+    width: 220px;
+  }
+  .section-our-services__content--paragraph--3 {
+    width: 220px;
+  }
+  .section-our-services__content--paragraph--4 {
+    width: 220px;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -1013,6 +1051,30 @@ span {
   }
   .footer__social-media-icons {
     margin: 0;
+  }
+  .section-our-services__content--element--2 {
+    margin-left: 0;
+  }
+  .section-our-services__content--element--3 {
+    margin-left: 0;
+  }
+  .section-our-services__content--element--4 {
+    margin-left: 0;
+  }
+  .section-our-services__content--element--5 {
+    margin-left: 0;
+  }
+  .section-our-services__content--paragraph--1 {
+    width: 100%;
+  }
+  .section-our-services__content--paragraph--2 {
+    width: 100%;
+  }
+  .section-our-services__content--paragraph--3 {
+    width: 100%;
+  }
+  .section-our-services__content--paragraph--4 {
+    width: 100%;
   }
 }
 @media only screen and (max-width: 374px) {
