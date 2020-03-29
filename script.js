@@ -16,11 +16,13 @@ function onScroll(event) {
     }
   });
   /*Making header smaller on scroll*/
-  let header = document.querySelector(".header")
-  if (window.pageYOffset > 100) {
+  let header = document.querySelector(".header");
+  if (window.pageYOffset > 100 && window.innerWidth > 768) {
     header.style.height = '3.9rem';
-  } else {
+  } else if (window.innerWidth > 768) {
     header.style.height = '8.9rem';
+  } else {
+    header.style.height = '7.1rem';
   }
 }
 /*Switching slides*/
@@ -211,5 +213,16 @@ function popupWithFormData () {
     popupCondition = 0;
     popup.classList.add('section-contact-popup--hidden');
     form.reset();
+  }
+}
+//Closing of mobile menu
+let navigationList = document.querySelector('.navigation__list');
+navigationList.addEventListener('click', mobileMenuClose);
+function mobileMenuClose () {
+  let targetElement = event.target;
+  //Make protection from not image elements
+  if (targetElement.tagName == 'A') {
+    document.getElementById("navi-toggle").checked = false;
+    console.log('False');
   }
 }
