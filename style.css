@@ -620,13 +620,14 @@ span {
     overflow-x: hidden;
   }
   .header {
-    width: 76.8rem;
+    width: 100%;
   }
   .header-navigation {
     margin-right: 4rem;
   }
   .section-slider {
     height: 44.725rem;
+    padding-top: 3.5rem;
   }
   #section-slider__vertical-phone--housing {
     height: 34.426rem;
@@ -739,7 +740,7 @@ span {
   }
   .header {
     justify-content: center;
-    width: 37.5rem;
+    width: 100%;
     height: 7.1rem;
   }
   .header__heading {
@@ -1078,5 +1079,45 @@ span {
   }
 }
 @media only screen and (max-width: 374px) {
-
+  .header__heading {
+    margin-left: 0;
+  }
+  .section-our-services {
+    height: 121.913rem;
+  }
+  .section-slider__arrows {
+    width: 32rem;
+  }
+  .section-portfolio__content--element {
+    height: 9.8rem;
+    width: 12.1rem;
+  }
+  .section-portfolio {
+    height: 75.4rem;
+  }
+  .section-about-us__content--element {
+    width: 26.4rem;
+  }
+  .section-about-us__content--image {
+    height: 25.4rem;
+    width: 26.4rem;
+  }
+  .section-contact__form {
+    width: 26.5rem;
+  }
+  .section-contact__form--input {
+    width: 26.5rem;
+  }
+  .section-contact__form-content--button {
+    padding: 1.5rem 11.5rem;
+  }
+  .section-contact {
+    height: 102.9rem;
+  }
+  .section-contact__aside {
+    width: 26.5rem;
+  }
+  .section-contact__aside--paragraph {
+    width: 26.5rem;
+  }
 }
