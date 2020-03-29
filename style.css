@@ -620,7 +620,7 @@ span {
     overflow-x: hidden;
   }
   .header {
-    width: 76.8rem;
+    width: 100%;
   }
   .header-navigation {
     margin-right: 4rem;
@@ -740,7 +740,7 @@ span {
   }
   .header {
     justify-content: center;
-    width: 37.5rem;
+    width: 100%;
     height: 7.1rem;
   }
   .header__heading {
@@ -1080,7 +1080,7 @@ span {
 }
 @media only screen and (max-width: 374px) {
   .header__heading {
-    margin-left: -4rem;
+    margin-left: 0;
   }
   .section-our-services {
     height: 121.913rem;
